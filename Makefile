@@ -19,7 +19,7 @@ integration-test: funlocal.PID
 
 package:
 	fun build
-	fun package --oss-bucket tz-staging
+	fun package --oss-bucket tz-staging-test
 
 stack_name := tz-e2e-$(shell date +%s)
 
@@ -32,4 +32,4 @@ e2e-test:
 	bin/delRosStack.sh $(stack_name)
 
 deploy:
-	fun deploy --use-ros --stack-name tz-staging --assume-yes
+	fun deploy --use-ros --stack-name tz-staging-test --assume-yes
